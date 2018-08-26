@@ -1,0 +1,19 @@
+PBurbujas Bu;
+
+//_____SETUP_____//
+void setup(){
+ size(800,600); 
+ background(255);
+ smooth();
+ colorMode(HSB,360,100,100); //mode de color HSB
+ frameRate(1); 
+ Bu= new PBurbujas(300); //creacion de objeto PBurbujas
+ Bu.inicio(); //inicializa el objeto
+}
+
+//_____DRAW_____//
+void draw(){
+  background(255,0,0);
+  Bu.colores((int)random(360));
+  Bu.display(width/2,height/2);
+}
