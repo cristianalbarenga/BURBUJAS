@@ -2,14 +2,15 @@
 precision mediump float;
 #endif
 
-uniform vec2 u_resolution;
+uniform vec2 u_resolution;  //define resolucion
+uniform vec3 u_color;  //define el ingreso del color
 
 void main() {
-    vec2 resolucion = gl_FragCoord.xy/u_resolution;
+    vec2 res = gl_FragCoord.xy/u_resolution;
+    
+    vec3 colrShadow = u_color / 2.0;  
 
-    float r= 1.0 - (resolucion.x+resolucion.y )/ 4.5;
-    float g= 0.0;
-    float b= 0.752;
+    vec3 colrMix= mix(u_color,colrShadow,(res.x+res.y)/2.5);
 
-    gl_FragColor = vec4(r, g, b, 1.0);
+    gl_FragColor = vec4(colrMix, 1.0);
 }
