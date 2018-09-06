@@ -8,7 +8,7 @@ uniform vec3 u_color;  //define el ingreso del color
 void main() {
     vec2 res = gl_FragCoord.xy/u_resolution;
     
-    vec3 colrShadow = u_color / 2.0;  
+    vec3 colrShadow = u_color / 1.5;  
 
     vec3 colrMix= mix(u_color,colrShadow,(res.x+res.y)/2.5);
 
