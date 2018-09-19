@@ -45,5 +45,6 @@ class PAros{
     int posX=int(pos_Aros.x - diam_Aros/2); //posicion del centro en eje x
     int posY=int(pos_Aros.y - diam_Aros/2); //posicion del centro en eje y
       image(Obj_aros,posX,posY); //representa en pantalla    
-  }
-}
+  }//-----------------------------//
+ 
+}//--- FIN DE CLASS
