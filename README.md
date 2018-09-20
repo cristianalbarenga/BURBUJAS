@@ -4,4 +4,4 @@
 
 Preview of graphic shader for bubble fill.
 
-![Image of Burbujas](https://raw.githubusercontent.com/cristianalbarenga/BURBUJAS/master/Burbuja_fragShader_preview.png)
+![Image of Burbujas](https://raw.githubusercontent.com/cristianalbarenga/BURBUJAS/master/Burbuja_fragShader_prev.png)
