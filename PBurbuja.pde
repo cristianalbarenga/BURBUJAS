@@ -29,6 +29,7 @@ class PBurbuja{
   void forma_Burbuja(){
       Obj_burbuja.beginDraw();
         Obj_burbuja.clear();
+        Obj_burbuja.background(127,0);
         Obj_burbuja.smooth();
         Obj_burbuja.noStroke();
         Obj_burbuja.shader(Burbuja_shader); //aplica el shader
