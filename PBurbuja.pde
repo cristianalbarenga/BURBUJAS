@@ -28,14 +28,14 @@ class PBurbuja{
   se genera la forma de la burbuja. */
   void forma_Burbuja(){
       Obj_burbuja.beginDraw();
+        Obj_burbuja.clear();
         Obj_burbuja.smooth();
         Obj_burbuja.noStroke();
         Obj_burbuja.shader(Burbuja_shader); //aplica el shader
         Obj_burbuja.rect(0, 0, Obj_burbuja.width, Obj_burbuja.height); //genera una forma rectangular
-        Obj_burbuja.resetShader(); 
-        Obj_burbuja.noFill();
+        Obj_burbuja.resetShader();
       Obj_burbuja.endDraw();    
-  }//_______________________________//
+  }//------------------------------//
   
   /*----------- COLOR ---------------
   envia al shader el color de la burbuja*/
@@ -46,19 +46,19 @@ class PBurbuja{
     float b= blue(color_Burb);  //idem componente azul
     
     Burbuja_shader.set("u_color",r,g,b); //ingresa valores al shader 
-  }//_______________________________//
+  }//------------------------------//
   
   /*--------- CREA BURBUJA ---------
   crea la forma de la burbuja */
   void genera_Burbuja(color colr){
     color_Burbuja(colr);  //ingresa el color al shader
     forma_Burbuja();  //crea la forma
-  }//_______________________________//
+  }//------------------------------//
   
   /*------------ RENDER -------------
   devuelve la grafica de burbuja */
   PGraphics render_Burbuja(){
      return Obj_burbuja;
-  }//_______________________________//
+  }//------------------------------//
   
 }//--- FIN DE CLASS
